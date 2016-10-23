@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{1BF20ADF-8200-6BF5-856C-CBC24F9F654D}") = "AR Game", "Assembly-CSharp.csproj", "{394C58CF-499E-C51E-F123-E855209800F2}"
+EndProject
+Project("{1BF20ADF-8200-6BF5-856C-CBC24F9F654D}") = "AR Game", "Assembly-CSharp-Editor.csproj", "{CE7352A1-AB0B-EEC0-6BA9-1A9D2DDBA519}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{394C58CF-499E-C51E-F123-E855209800F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{394C58CF-499E-C51E-F123-E855209800F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{394C58CF-499E-C51E-F123-E855209800F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{394C58CF-499E-C51E-F123-E855209800F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE7352A1-AB0B-EEC0-6BA9-1A9D2DDBA519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE7352A1-AB0B-EEC0-6BA9-1A9D2DDBA519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE7352A1-AB0B-EEC0-6BA9-1A9D2DDBA519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE7352A1-AB0B-EEC0-6BA9-1A9D2DDBA519}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
