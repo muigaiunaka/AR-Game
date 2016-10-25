@@ -14,8 +14,3 @@ Working with Tiffany Chao and Dwight Clarke for Animation, 3D modeling and desig
 **Developer Stack**
 - C# in Unity3D Engine
 - more to come ...
-
-**Developer To-dos**
-- [x] Create Git Repository for Capstone AR Game
-- [ ] Invite Ariana & Jesse to be collaborators
-- [ ] Document everything in ReadMe
