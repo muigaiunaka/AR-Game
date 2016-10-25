@@ -18,3 +18,5 @@ Working with Tiffany Chao and Dwight Clarke for Animation, 3D modeling and desig
 Muigai - Goals for the semester? Be confident ....
 
 Ariana - "I'm looking forward to touching it!"
+
+Dwight - "You don't fail, you just don't succeed"
