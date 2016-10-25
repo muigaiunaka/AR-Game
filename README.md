@@ -14,3 +14,6 @@ Working with Tiffany Chao and Dwight Clarke for Animation, 3D modeling and desig
 **Developer Stack**
 - C# in Unity3D Engine
 - more to come ...
+
+Muigai - Goals for the semester? Be confident ....
+Ariana - "I'm looking forward to touching it!"
