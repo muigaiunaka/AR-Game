@@ -15,7 +15,8 @@ Working with Tiffany Chao and Dwight Clarke for Animation, 3D modeling and desig
 - C# in Unity3D Engine
 - more to come ...
 
+Muigai - Goals for the semester? Be confident ....
 
-- [x] Create Git Repository for Capstone AR Game
-- [ ] Invite Ariana & Jesse to be collaborators
-- [ ] Document everything in ReadMe
+Ariana - "I'm looking forward to touching it!"
+
+Dwight - "You don't fail, you just don't succeed"
