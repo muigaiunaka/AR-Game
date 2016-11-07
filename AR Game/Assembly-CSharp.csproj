@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Companion.cs" />
+     <Compile Include="Assets\Inventory.cs" />
      <Compile Include="Assets\KudanAR\Samples\Flying\FlyBehaviour_RigidbodyVelocity.cs" />
      <Compile Include="Assets\KudanAR\Samples\Flying\FlyBehaviour_TargetTransform.cs" />
      <Compile Include="Assets\KudanAR\Samples\Scripts\MarkerlessTouch.cs" />
@@ -73,6 +75,7 @@
      <Compile Include="Assets\KudanAR\Scripts\Components\TransformDrivers\MarkerTransformDriver.cs" />
      <Compile Include="Assets\KudanAR\Scripts\Components\TransformDrivers\MarkerlessTransformDriver.cs" />
      <Compile Include="Assets\KudanAR\Scripts\Components\TransformDrivers\TransformDriverBase.cs" />
+     <Compile Include="Assets\User.cs" />
      <None Include="Assets\KudanAR\Materials\Background.shader" />
      <None Include="Assets\KudanAR\Materials\ShadowCatcher.shader" />
      <None Include="Assets\KudanAR\Materials\DebugFlat.shader" />
