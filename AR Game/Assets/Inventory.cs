@@ -6,7 +6,6 @@ public class Inventory : MonoBehaviour {
 	private Dictionary<string, int> items;
 	private int size;
 
-
 	// constructor for the Inventory
 	public Inventory(Dictionary<string, int> items, int size) {
 		this.items = new Dictionary <string, int> ();
@@ -25,20 +24,28 @@ public class Inventory : MonoBehaviour {
 	// adds an item to the inventory
 	public void addItem(Item item) {
 		// check if the inventory contains the item already
-		if (items.ContainsKey (item.name)) {
-			this.items[item.name] += 1;
+		if (items.ContainsKey (item.getName() ) ) {
+			
+			this.items[item.getName()] += 1;
+
 		} else {
-			this.items.Add (item.name, ++item.count);
+			
+			this.items.Add (item.getName(), 0 );
+
 		}
 	}
 
 	// removes an item from the inventory
 	public void removeItem(Item item) {
-		if (items.ContainsKey(item.name) ) {
-			if (items [item.name] > 1) {
-				this.items [item.name] -= 1;
+		if (items.ContainsKey(item.getName()) ) {
+			if (items [item.getName()] > 1) {
+				
+				this.items [item.getName()] -= 1;
+
 			} else {
-				items.Remove (item.name);
+				
+				items.Remove (item.getName());
+
 			}
 		} else {
 			// throw an exception?

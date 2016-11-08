@@ -8,8 +8,6 @@ public class User : MonoBehaviour {
 	Companion companion;
 	Inventory inventory;
 
-	public 
-
 	// Use this for initialization
 	void Start () {
 	
@@ -23,5 +21,10 @@ public class User : MonoBehaviour {
 	void addToInventory(Item i) {
 		// on touch 
 		this.inventory.addItem (i);
+	}
+
+	// removes this item from the User's inventory
+	void removeFromInventory(Item i) {
+		this.inventory.removeItem (i);
 	}
 }

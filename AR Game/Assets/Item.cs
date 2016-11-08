@@ -3,12 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Item : MonoBehaviour {
-	public string name;
-	public int count;
+	private string name;
 
-	public Item(string name, int primaryKey) {
+	public Item(string name) {
 		this.name = name;
-		this.count = 0;
 	}
 
 	// Use this for initialization
@@ -20,4 +18,10 @@ public class Item : MonoBehaviour {
 	void Update () {
 	
 	}
+		
+	// returns the name of the item
+	public string getName() {
+		return this.name;
+	}
+
 }
