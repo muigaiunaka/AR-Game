@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour {
-	Dictionary<string, ArrayList> items;
-	int size;
+	private Dictionary<string, int> items;
+	private int size;
+
 
 	// constructor for the Inventory
-	public Inventory(Hashtable items, int size) {
-		this.items = new Dictionary <string, ArrayList> ();
+	public Inventory(Dictionary<string, int> items, int size) {
+		this.items = new Dictionary <string, int> ();
 		this.size = size;
 	}
 
@@ -22,23 +23,23 @@ public class Inventory : MonoBehaviour {
 	}
 
 	// adds an item to the inventory
-	void addItem(Item item) {
-		ArrayList pks = new ArrayList ();
+	public void addItem(Item item) {
 		// check if the inventory contains the item already
 		if (items.ContainsKey (item.name)) {
-			// adds to the List of primary key that the item has
-			items [item.name].Add (item.primaryKey);
+			this.items[item.name] += 1;
 		} else {
-			// add a new List as a value of the 
-			items.Add (item.name, pks.Add(item.primaryKey) );
-			items [item.name].Add (item.primaryKey);
+			this.items.Add (item.name, ++item.count);
 		}
 	}
 
 	// removes an item from the inventory
-	void removeItem(Item item) {
+	public void removeItem(Item item) {
 		if (items.ContainsKey(item.name) ) {
-			items [item.name].Remove (item.primaryKey);
+			if (items [item.name] > 1) {
+				this.items [item.name] -= 1;
+			} else {
+				items.Remove (item.name);
+			}
 		} else {
 			// throw an exception?
 			Debug.Log("that item is not in this inventory");
@@ -46,12 +47,25 @@ public class Inventory : MonoBehaviour {
 	}
 
 	// returns the total count for the inventory
-	int getCount() {
+	public int getCount() {
 		int count = 0;
-		foreach (string item in items) {
-			count += items [item].Count;
+		foreach (string item in items.Keys) {
+			count += items [item];
 		}
 		return count;
+	}
+
+	// returns all of the items as a list
+	public ArrayList getItems() {
+		ArrayList loi = new ArrayList ();
+
+		foreach (string item in items.Keys) {
+			for (int i = 0; i < items [item]; i++) {
+				loi.Add (item);
+			}
+		}
+		this.size = loi.Count;
+		return loi;
 	}
 
 }

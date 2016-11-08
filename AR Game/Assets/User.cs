@@ -8,6 +8,8 @@ public class User : MonoBehaviour {
 	Companion companion;
 	Inventory inventory;
 
+	public 
+
 	// Use this for initialization
 	void Start () {
 	
@@ -16,5 +18,10 @@ public class User : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+	// add the item to this User's inventory
+	void addToInventory(Item i) {
+		// on touch 
+		this.inventory.addItem (i);
 	}
 }

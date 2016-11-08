@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class Item : MonoBehaviour {
 	public string name;
-	public int primaryKey;
+	public int count;
 
 	public Item(string name, int primaryKey) {
 		this.name = name;
-		this.primaryKey = primaryKey;
+		this.count = 0;
 	}
 
 	// Use this for initialization
