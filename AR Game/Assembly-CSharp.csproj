@@ -45,8 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ButtonTest.cs" />
      <Compile Include="Assets\Companion.cs" />
      <Compile Include="Assets\Inventory.cs" />
+     <Compile Include="Assets\Item.cs" />
      <Compile Include="Assets\KudanAR\Samples\Flying\FlyBehaviour_RigidbodyVelocity.cs" />
      <Compile Include="Assets\KudanAR\Samples\Flying\FlyBehaviour_TargetTransform.cs" />
      <Compile Include="Assets\KudanAR\Samples\Scripts\MarkerlessTouch.cs" />
