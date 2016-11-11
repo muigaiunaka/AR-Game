@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 98d08291baa2d484baa381147dccdcc1
+timeCreated: 1478636725
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: body
+    100004: body_control
+    100006: face_joint
+    100008: hair
+    100010: hair1_joint
+    100012: hair2_joint
+    100014: hair3_joint
+    100016: hair4_joint
+    100018: head
+    100020: head_control
+    100022: head_group
+    100024: head_neck_influence
+    100026: head_neck_influenceBase
+    100028: imagePlane1
+    100030: imagePlane2
+    100032: joint5
+    100034: neck
+    100036: neck1_joint
+    100038: neck2_joint
+    100040: neck3_joint
+    100042: neck_base_FK_control
+    100044: neck_base_IK
+    100046: neck_curve_IK
+    100048: neck_end_FK
+    100050: neck_end_IK
+    100052: neck_handle_IK
+    100054: neck_torso_influence
+    100056: neck_torso_influenceBase
+    100058: robot
+    100060: robot_group
+    100062: root
+    100064: torso
+    100066: torso_control
+    100068: torso_joint
+    100070: torso_neck_control
+    100072: transform1
+    400000: //RootNode
+    400002: body
+    400004: body_control
+    400006: face_joint
+    400008: hair
+    400010: hair1_joint
+    400012: hair2_joint
+    400014: hair3_joint
+    400016: hair4_joint
+    400018: head
+    400020: head_control
+    400022: head_group
+    400024: head_neck_influence
+    400026: head_neck_influenceBase
+    400028: imagePlane1
+    400030: imagePlane2
+    400032: joint5
+    400034: neck
+    400036: neck1_joint
+    400038: neck2_joint
+    400040: neck3_joint
+    400042: neck_base_FK_control
+    400044: neck_base_IK
+    400046: neck_curve_IK
+    400048: neck_end_FK
+    400050: neck_end_IK
+    400052: neck_handle_IK
+    400054: neck_torso_influence
+    400056: neck_torso_influenceBase
+    400058: robot
+    400060: robot_group
+    400062: root
+    400064: torso
+    400066: torso_control
+    400068: torso_joint
+    400070: torso_neck_control
+    400072: transform1
+    2300000: hair
+    2300002: head
+    2300004: head_neck_influence
+    2300006: head_neck_influenceBase
+    2300008: neck_torso_influence
+    2300010: neck_torso_influenceBase
+    2300012: robot
+    2300014: torso
+    3300000: hair
+    3300002: head
+    3300004: head_neck_influence
+    3300006: head_neck_influenceBase
+    3300008: neck_torso_influence
+    3300010: neck_torso_influenceBase
+    3300012: robot
+    3300014: torso
+    4300000: robot
+    4300002: neck
+    4300004: torso
+    4300006: neck_torso_influence
+    4300008: neck_torso_influenceBase
+    4300010: head
+    4300012: head_neck_influence
+    4300014: head_neck_influenceBase
+    4300016: hair
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: neck
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
