@@ -3,6 +3,8 @@
 # =============== #
 Temp/
 Library/
+ProjectSettings/
+Assembly-CSharp*
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
