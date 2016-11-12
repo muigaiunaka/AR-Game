@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<story>
+  <description>Welcome to the, "Which type of Fairy Tail Magic would you have?" game!  Make choices in order to get to an end result. It's super fun, I promise!</description>
+  <prompt end="n">In a fight, how would you land hits on your opponent?</prompt>
+  <opt>
+    <decision>With elemental powers.</decision>
+    <prompt end="n">Which element do you prefer?</prompt>
+      <opt>
+        <decision>Water</decision>
+        <prompt end="n">What is your personality like?</prompt>
+          <opt>
+            <decision>Very emotional.</decision>
+            <prompt img="juvia.jpg" end="y"></prompt>
+            <ending>You would wield Water Magic; wash your enemies away with the power of the sea!  Join up with Juvia and rain on everyone's parade!</ending>
+          </opt>
+          <opt>
+            <decision>Very collected.</decision>
+            <prompt img="gray.jpg" end="y"></prompt>
+            <ending>You would wield Ice Magic; freeze things or make objects out of ice to fight with!  Team up with Gray or Leon to see who is the best!</ending>
+          </opt>
+      </opt>
+      <opt>
+        <decision>Fire</decision>
+        <prompt end="n">What is more important to you?</prompt>
+          <opt>
+            <decision>Power.</decision>
+            <prompt img="laxus.jpg" end="y"></prompt>
+            <ending>You would be a Lightning Dragon Slayer; electrocute foes with your lightning shocks! Go head to head with Laxus and see who comes out on top!</ending>
+          </opt>
+          <opt>
+            <decision>Friends.</decision>
+            <prompt img="natsu.jpg" end="y"></prompt>
+            <ending>You would be a Fire Dragon Slayer; fight everything with fire as you charge straight into battle! Be a hot-head and brawl with Natsu!</ending>
+          </opt>
+          <opt>
+            <decision>Standing up for yourself.</decision>
+            <prompt img="romeo.png" end="y"></prompt>
+            <ending>You would wield Purple Flare Magic! This type of fire magic is not hot to the touch, but you and Romeo will still pack a major punch!</ending>
+          </opt>
+      </opt>
+      <opt>
+        <decision>Earth</decision>
+        <prompt end="n">Do you feel at all connected with nature?</prompt>
+          <opt>
+            <decision>Yes, I think animals and plants are cool!</decision>
+            <prompt end="n">How do you face a conflict?</prompt>
+              <opt>
+                <decision>Head on, like a man!</decision>
+                <prompt img="takeover.jpg" end="y"></prompt>
+                <ending>You'd have Take Over Magic; borrow different forms of magical animals and creatures! Hang with Elfman, Mirajane, and Lisanna as you take on powerful new forms!</ending>
+              </opt>
+              <opt>
+                <decision>With a strategy.</decision>
+                <prompt img="plantmagic.png" end="y"></prompt>
+                <ending>You'd wield Plant Magic; use nature's power to kick butt! Droy will let you join his team, Shadow Gear, but you'd better not flirt with Levy!</ending>
+              </opt>
+          </opt>
+          <opt>
+            <decision>No, nature doesn't concern me.</decision>
+            <prompt img="jura.jpg" end="y"></prompt>
+            <ending>You'd wield Earth Magic; control the ground and create earthquakes! Have a rockin' time taking down enemies with the wizard-saint Jura!</ending>
+          </opt>
+      </opt>    
+      <opt>
+        <decision>Air</decision>
+        <prompt end="n">Is it important to help the injured?</prompt>
+          <opt>
+            <decision>Definitely, I don't like seeing people hurt!</decision>
+            <prompt img="wendy.jpg" end="y"></prompt>
+            <ending>You would be an Sky Dragon Slayer; heal the injuries and fatigue of your allies!  Help out your friends with your cool healing powers like Wendy does!</ending>
+          </opt>
+          <opt>
+            <decision>Yes, but I can't help everyone who is hurt.</decision>
+            <prompt img="aera.jpg" end="y"></prompt>
+            <ending>You would have Aera Magic; fly around the skies with your covetted wings!  Be an Exceed and take charge of the skies with Happy, Carla, Lily, and Sammy!</ending>
+          </opt>
+      </opt>
+      <opt>
+        <decision>Metal</decision>
+        <prompt img="gajeel.jpg" end="y"></prompt>
+        <ending>You would be a Iron Dragon Slayer; pound your opponents with iron-based attacks! Be a punk, yet an 'awesome' singer like Gajeel!</ending>
+      </opt>
+  </opt>
+  <opt>
+    <decision>By using a magical object.</decision>
+    <prompt end="n">What would you use to fight your opponent?</prompt>
+      <opt>
+        <decision>Weapons</decision>
+        <prompt end="n">Which is your personality more like?</prompt>
+          <opt>
+            <decision>Vigilante, quick to adapt.</decision>
+            <prompt img="erza.png" end="y"></prompt>
+            <ending>You would be a master of Requip Magic; change your weapon and armor at any time! Learn some tips from Erza, the master of Requip Magic. No wonder she's called the Queen of the Fairies.</ending>
+          </opt>
+          <opt>
+            <decision>Secretive, but loyal.</decision>
+            <prompt img="mystogan.jpg" end="y"></prompt>
+            <ending>You would be a master of Magic Staves; fire magical beams from them or perform powerful spells!  Mystogan isn't one to take on apprentices, but surely you'd be able to wield them on your own.</ending>
+          </opt>
+      </opt>
+      <opt>
+        <decision>Partners willing to help out.</decision>
+        <prompt end="n">How would you feel about these partners?</prompt>
+          <opt>
+            <decision>They're just tools to be used.</decision>
+            <prompt img="angel.png" end="y"></prompt>
+            <ending>You would use Angel Magic; call upon angels to do your dirty work. Don't let your desires to be an angel control your heart, like they did for Angel!</ending>
+          </opt>
+          <opt>
+            <decision>They'd be my close friends!</decision>
+            <prompt img="lucy.png" end="y"></prompt>
+            <ending>You would use Celestial Spirit Magic; use keys to call upon a variety of spirits from a magical world. Pair up with Lucy to battle your opponents using strategy and the powerful skills of your spirtis!</ending>
+          </opt>
+      </opt>
+      <opt>
+        <decision>Random Objects</decision>
+        <prompt end="n">What do you enjoy most?</prompt>
+          <opt>
+            <decision>Art</decision>
+            <prompt img="reedus.png" end="y"></prompt>
+            <ending>You would use Pict Magic; anything you draw with your magic paintbrush will come to life!  See who is a more skilled artist between you and Reedus!</ending>
+          </opt>
+          <opt>
+            <decision>Cards</decision>
+            <prompt img="cana.jpg" end="y"></prompt>
+            <ending>You would use Card Magic; call on the power of the cards to create a variety of different magic! Throw down and learn from Cana the ways of divination as well!</ending>
+          </opt>
+          <opt>
+            <decision>Perfume</decision>
+            <prompt img="ichiya.jpg" end="y"></prompt>
+            <ending>You would use Perfume Magic! Inhale some strange perfumes with Ichiya that will boost your physical or mental performance in battle!</ending>
+          </opt>
+      </opt>
+  </opt>
+  <opt>
+    <decision>By casting magic spells.</decision>
+    <prompt end="n">Which body part is more interesting to you?</prompt>
+      <opt>
+        <decision>The eyes.</decision>
+        <prompt end="n">What is the best way to overwhelm an opponent?</prompt>
+          <opt>
+            <decision>Cunning and strategy.</decision>
+            <prompt img="freed.jpg" end="y"></prompt>
+            <ending>You would wield Dark Écriture Magic; write special runes empowered by your eyes to confuse and trap your opponents! Freed would be happy to teach you his ways!</ending>
+          </opt>
+          <opt>
+            <decision>Charm and stealth.</decision>
+            <prompt img="evergreen.jpg" end="y"></prompt>
+            <ending>You would wield Stone Eye Magic; turn foes to stone by meeting their gaze! You and Evergreen can go Medusa on anyone who has wronged you!</ending>
+          </opt>
+          <opt>
+            <decision>Out-number and conquer.</decision>
+            <prompt img="bickslow.jpg" end="y"></prompt>
+            <ending>You would wield Figure Eye Magic; take control of an opponent's soul by meeting their gaze!  Bickslow would love to introduce you to his "babies" and face off against you!</ending>
+          </opt>
+      </opt>
+      <opt>
+        <decision>The hands.</decision>
+        <prompt end="n">Do you enjoy breaking things?</prompt>
+          <opt>
+            <decision>Of course, who wouldn't!?</decision>
+            <prompt img="gildarts.jpg" end="y"></prompt>
+            <ending>You would wield Crash Magic; break down anything you touch into smaller matter!  You and Gildarts would demolish everything in your paths; so much for minimizing damage!</ending>
+         </opt>
+         <opt>
+            <decision>No... not particularly.</decision>
+            <prompt img="levy.jpg" end="y"></prompt>
+            <ending>You would wield Solid Script Magic; write runes that can give you magic powers in battle! Levy would love to show you the novel she's writing sometime!</ending>
+         </opt>
+      </opt>
+  </opt>
+</story>

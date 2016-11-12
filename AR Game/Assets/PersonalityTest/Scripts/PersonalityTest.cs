@@ -6,7 +6,7 @@ using System.Xml;
 
 public class PersonalityTest : MonoBehaviour {
 	public static char[] DECISION_LETTERS = new char[5]{'a', 'b', 'c', 'd', 'e'};
-	private static string XML_FILE = "FairyTailMagicText.xml";
+	private static string XML_FILE = "FairyTailMagicText";
 
 	public GameObject decisionPrefab;
 	public GameObject questionPrefab;
@@ -24,9 +24,11 @@ public class PersonalityTest : MonoBehaviour {
 
 		questionCount = 1;
 		currentDecisions = new HashSet<GameObject> ();
+		Debug.Log (Resources.Load (XML_FILE));
 
+		TextAsset xmlAsset = Resources.Load(XML_FILE) as TextAsset;
 		XmlDocument xmlDoc = new XmlDocument();
-		xmlDoc.Load(XML_FILE);
+		xmlDoc.LoadXml(xmlAsset.text);
 		XmlNodeList personalityTest = xmlDoc.GetElementsByTagName("story");
 		XmlNodeList firstQuestion = personalityTest[0].ChildNodes;
 		parseQuestion (firstQuestion);

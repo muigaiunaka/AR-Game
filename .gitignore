@@ -4,7 +4,6 @@
 Temp/
 Library/
 ProjectSettings/
-Assembly-CSharp*
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -20,6 +19,7 @@ obj/
 *.user
 *.unityproj
 *.booproj
+*.csproj
 
 # ============ #
 # OS generated #
