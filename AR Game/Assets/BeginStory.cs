@@ -18,7 +18,7 @@ public class BeginStory : MonoBehaviour {
 		RectTransform rt = contBtn.GetComponent<RectTransform>();
 		btn.onClick.AddListener(Next);
 		rt.sizeDelta = new Vector2(150, 50);
-		rt.transform.position = new Vector2(560, 45);
+		rt.transform.position = new Vector3(759, 45, 0); //560, 45 759
 
 		// Add text to next button
 		GameObject cTextGO = new GameObject("Continue Text");
@@ -29,7 +29,7 @@ public class BeginStory : MonoBehaviour {
 	    contText.text = "Next";
 		contText.color = Color.black;
 		contText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
-		contText.transform.position = new Vector2(600, 0);
+		contText.transform.position = new Vector2(794, 0); //600, 0
 
 		// Add dialogue to the string array
 		dialogue = new string[] {
@@ -64,6 +64,8 @@ public class BeginStory : MonoBehaviour {
 		if (counter < dialogue.Length) {
 			narrText.text = dialogue[counter];
 			counter++;
+		} else {
+			SceneManager.LoadScene(1);
 		}
 	}
 }

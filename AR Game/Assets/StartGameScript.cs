@@ -31,8 +31,8 @@ public class StartGameScript : MonoBehaviour {
 			GameObject textBoxGO = new GameObject("Dialogue Textbox");
 			textBoxGO.AddComponent<Image>().color = Color.white;
 			RectTransform rt = textBoxGO.GetComponent<RectTransform>();
-			rt.sizeDelta = new Vector2(600, 100);
-			rt.transform.position = new Vector2(340, 70);
+			rt.sizeDelta = new Vector2(800, 100);
+			rt.transform.position = new Vector3(434, 70, 0); //340 70 434, 70
 
 			// Add text to textbox
 			GameObject textGO = new GameObject("Narrative Text");
