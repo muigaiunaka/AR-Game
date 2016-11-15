@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -72,9 +73,20 @@ public class PersonalityTest : MonoBehaviour {
 					GameObject endingObj = Instantiate (questionPrefab, canvas.transform) as GameObject;
 					endingObj.GetComponent<Text> ().text = item.InnerText;
 					endingObj.transform.position = new Vector3 ();
+
+					GameObject nextBtn = new GameObject("Next Button");
+					nextBtn.transform.SetParent(canvas.transform);
+					nextBtn.AddComponent<Image>();
+					nextBtn.GetComponent<RectTransform>();
+					Button btn = nextBtn.AddComponent<Button>();
+					btn.onClick.AddListener(nextScene);
 					return;
 			}
 		}
+	}
+
+	void nextScene() {
+		SceneManager.LoadScene(2);
 	}
 
 	void resetCanvasTransform() {
