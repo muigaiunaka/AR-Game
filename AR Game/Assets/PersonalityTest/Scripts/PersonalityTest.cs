@@ -50,9 +50,11 @@ public class PersonalityTest : MonoBehaviour {
 
 				case "prompt":
 					if ("n".Equals (item.Attributes ["end"].Value)) {
-						GameObject questionObj = Instantiate (questionPrefab, canvas.transform) as GameObject;
+						GameObject questionObj = Instantiate (questionPrefab) as GameObject;
 						questionObj.GetComponent<Text> ().text = (questionCount.ToString () + ") " + item.InnerText);
-						questionObj.transform.position = new Vector3 (-40, 80, 1);
+						questionObj.transform.SetParent (canvas.transform, false);
+						questionObj.transform.localScale = Vector3.one;
+						//questionObj.transform.position = new Vector3 (-40, 80, 1);
 						currentQuestion = questionObj;
 						questionCount++;
 					}
@@ -61,8 +63,9 @@ public class PersonalityTest : MonoBehaviour {
 				case "opt":
 					string text = item.SelectSingleNode ("decision").FirstChild.Value;
 					Decision decision = new Decision (text, item.ChildNodes);
-					GameObject decisionObj = Instantiate (decisionPrefab, canvas.transform) as GameObject;
-					decisionObj.transform.position = new Vector3(0, counter, 0);
+					GameObject decisionObj = Instantiate (decisionPrefab, new Vector3 (0, counter, 0), Quaternion.identity) as GameObject;
+					decisionObj.transform.SetParent (canvas.transform, false); 
+					//decisionObj.transform.position = ;
 					decisionObj.GetComponentInChildren<Text> ().text = "  " + (DECISION_LETTERS[currentDecisions.Count]) + ") " + decision.getOptionText ();
 					decisionObj.GetComponent<Decide> ().decision = decision;
 					currentDecisions.Add (decisionObj);
@@ -70,9 +73,9 @@ public class PersonalityTest : MonoBehaviour {
 					break;
 
 				case "ending":
-					GameObject endingObj = Instantiate (questionPrefab, canvas.transform) as GameObject;
-					endingObj.GetComponent<Text> ().text = item.InnerText;
-					endingObj.transform.position = new Vector3 ();
+					//GameObject endingObj = Instantiate (questionPrefab, canvas.transform) as GameObject;
+					//endingObj.GetComponent<Text> ().text = item.InnerText;
+					//endingObj.transform.position = new Vector3 ();
 
 					GameObject nextBtn = new GameObject("Next Button");
 					nextBtn.transform.SetParent(canvas.transform);
