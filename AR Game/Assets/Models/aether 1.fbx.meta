@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 956a4e51737aed841918e916f72423b2
+timeCreated: 1479681216
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: body
+    100004: body 1
+    100006: body_control
+    100008: face_joint
+    100010: hair
+    100012: hair1_joint
+    100014: hair2_joint
+    100016: hair3_joint
+    100018: hair4_joint
+    100020: head
+    100022: head_control
+    100024: head_group
+    100026: head_neck_influence
+    100028: head_neck_influenceBase
+    100030: joint5
+    100032: neck
+    100034: neck 1
+    100036: neck1_joint
+    100038: neck2_joint
+    100040: neck3_joint
+    100042: neck_base_FK_control
+    100044: neck_base_IK
+    100046: neck_end_FK
+    100048: neck_end_IK
+    100050: neck_torso_influence
+    100052: neck_torso_influenceBase
+    100054: torso
+    100056: torso_control
+    100058: torso_joint
+    100060: torso_neck_control
+    100062: transform1
+    400000: //RootNode
+    400002: body
+    400004: body 1
+    400006: body_control
+    400008: face_joint
+    400010: hair
+    400012: hair1_joint
+    400014: hair2_joint
+    400016: hair3_joint
+    400018: hair4_joint
+    400020: head
+    400022: head_control
+    400024: head_group
+    400026: head_neck_influence
+    400028: head_neck_influenceBase
+    400030: joint5
+    400032: neck
+    400034: neck 1
+    400036: neck1_joint
+    400038: neck2_joint
+    400040: neck3_joint
+    400042: neck_base_FK_control
+    400044: neck_base_IK
+    400046: neck_end_FK
+    400048: neck_end_IK
+    400050: neck_torso_influence
+    400052: neck_torso_influenceBase
+    400054: torso
+    400056: torso_control
+    400058: torso_joint
+    400060: torso_neck_control
+    400062: transform1
+    2300000: hair
+    2300002: head
+    2300004: head_neck_influence
+    2300006: head_neck_influenceBase
+    2300008: neck_torso_influence
+    2300010: neck_torso_influenceBase
+    2300012: torso
+    3300000: hair
+    3300002: head
+    3300004: head_neck_influence
+    3300006: head_neck_influenceBase
+    3300008: neck_torso_influence
+    3300010: neck_torso_influenceBase
+    3300012: torso
+    4300000: torso
+    4300002: neck_torso_influence
+    4300004: neck_torso_influenceBase
+    4300006: head
+    4300008: head_neck_influenceBase
+    4300010: head_neck_influence
+    4300012: hair
+    4300014: neck
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: neck 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
