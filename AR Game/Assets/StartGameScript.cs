@@ -16,6 +16,9 @@ public class StartGameScript : MonoBehaviour {
 		persistent = GameObject.Find ("Persistent");
 		persistentScript = persistent.GetComponent<Persistent> ();
 
+		canvas = persistentScript.getSceneCanvas ();
+		canvas.transform.position = Vector3.zero;
+
 		// Set start button text and add StartGame function on click
 		btnText.text = "Start Game";
 		Button btn = startBtn.GetComponent<Button>();
@@ -36,25 +39,41 @@ public class StartGameScript : MonoBehaviour {
 			// Style and position textbox
 			GameObject textBoxGO = new GameObject("Dialogue Textbox");
 			textBoxGO.AddComponent<Image>().color = Color.white;
+
 			RectTransform rt = textBoxGO.GetComponent<RectTransform>();
 			rt.sizeDelta = new Vector2(800, 100);
-			rt.transform.position = new Vector3(434, 70, 0); //340 70 434, 70
+			rt.anchorMin = new Vector2 (.5f, 0);
+			rt.anchorMax = new Vector2 (.5f, 0);
+			rt.pivot = new Vector2 (.5f, 0);
+			textBoxGO.transform.SetParent(canvas.transform, false);
 
 			// Add text to textbox
 			GameObject textGO = new GameObject("Narrative Text");
-		    textBoxGO.transform.SetParent(canvas.transform);
-		    textGO.transform.SetParent(textBoxGO.transform);
+			textGO.transform.localPosition = Vector3.zero;
 		 	
 			// Style and position text in textbox
 		    Text narrText = textGO.AddComponent<Text>();
 		    narrText.text = "What is life?";
 			narrText.color = Color.black;
 			narrText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
-			narrText.transform.position = new Vector2(339, 50);
+
+			RectTransform rtText = textGO.GetComponent<RectTransform> ();
+			rtText.sizeDelta = new Vector2(300, 100);
+			rtText.anchorMin = new Vector2 (.2f, .2f);
+			rtText.anchorMax = new Vector2 (.9f, .9f);
+			rtText.pivot = new Vector2 (.5f, .5f);
+			textGO.transform.localPosition = Vector3.zero;
+
+			textGO.transform.SetParent(textBoxGO.transform);
+			textGO.transform.position = Vector3.zero;
+			textGO.transform.localPosition = Vector3.zero;
+			textGO.transform.localScale = Vector3.one;
 
 			// Adds "next" button to textbox
 			GameObject contBtn = new GameObject("Continue Btn");
-			contBtn.transform.SetParent(textBoxGO.transform);
+
+			contBtn.transform.SetParent(textBoxGO.transform, false);
+			contBtn.transform.localPosition = Vector3.zero;
 			contBtn.AddComponent<BeginStory>();
 
 			Destroy(GameObject.Find("Button"));

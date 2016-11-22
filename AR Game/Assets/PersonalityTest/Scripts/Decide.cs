@@ -5,34 +5,26 @@ using System.Xml;
 
 public class Decide : MonoBehaviour {
 	private GameObject persistent;
-	private  Persistent persistentScript;
+	private Persistent persistentScript;
 
-	private ArrayList nextDecisions;
-	private Button buttonObject;
+	private Button decisionButton;
 	private GameObject canvas;
 	public Decision decision;
-//	public Transform decisionPrefab;
 
-	// Use this for initialization
 	void Start () {
 		persistent = GameObject.Find ("Persistent");
 		persistentScript = persistent.GetComponent<Persistent> ();
 
-		canvas = GameObject.Find ("Canvas");
-		this.buttonObject = gameObject.GetComponent<Button>();
-		this.buttonObject.onClick.AddListener (decide);
-		this.nextDecisions = new ArrayList();
+		canvas = persistentScript.getSceneCanvas ();
+		decisionButton = gameObject.GetComponent<Button>();
+		decisionButton.onClick.AddListener (decide);
 
 	}
 
 	void decide() {
-//		Text buttonText = buttonObject.GetComponentInChildren<Text> ();
-//		string decisionLetter = buttonText.text.Split (new char[] { ')' }) [0];
-	
 		PersonalityTest personalityTest = canvas.GetComponent<PersonalityTest>();
-		Debug.Log (personalityTest.currentDecisions.Count);
-
 		Destroy (personalityTest.currentQuestion);
+
 		foreach (GameObject option in personalityTest.currentDecisions) {
 			Destroy (option);
 		}
@@ -42,8 +34,7 @@ public class Decide : MonoBehaviour {
 
 		if (personalityTest.isFinished) {
 			Destroy (GameObject.Find ("TestTitle"));
-			persistentScript.nextScene ();
-			persistentScript.loadScene ();
+			persistentScript.loadNextScene ();
 		};
 	}
 

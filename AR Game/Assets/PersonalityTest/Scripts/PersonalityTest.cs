@@ -15,18 +15,16 @@ public class PersonalityTest : MonoBehaviour {
 	public GameObject questionPrefab;
 	public GameObject currentQuestion;
 	public GameObject canvas;
+	public HashSet<GameObject> currentDecisions;
 	public bool isFinished = false;
 
 	private int questionCount;
 
-	public HashSet<GameObject> currentDecisions;
-
-	// Use this for initialization
 	void Start () {
 		persistent = GameObject.Find ("Persistent");
 		persistentScript = persistent.GetComponent<Persistent> ();
 
-		canvas = GameObject.Find ("Canvas");
+		canvas = persistentScript.getSceneCanvas ();
 		resetCanvasTransform ();
 
 		questionCount = 1;
@@ -45,7 +43,6 @@ public class PersonalityTest : MonoBehaviour {
 		int counter = 45;
 
 		foreach (XmlNode item in question) {
-			string tag = item.Name;
 			resetCanvasTransform ();
 
 			switch (item.Name) 
@@ -69,8 +66,7 @@ public class PersonalityTest : MonoBehaviour {
 				string text = item.SelectSingleNode ("decision").FirstChild.Value;
 				Decision decision = new Decision (text, item.ChildNodes);
 				GameObject decisionObj = Instantiate (decisionPrefab, new Vector3 (0, counter, 0), Quaternion.identity) as GameObject;
-				decisionObj.transform.SetParent (canvas.transform, false); 
-					//decisionObj.transform.position = ;
+				decisionObj.transform.SetParent (canvas.transform, false);
 				decisionObj.GetComponentInChildren<Text> ().text = "  " + (DECISION_LETTERS [currentDecisions.Count]) + ") " + decision.getOptionText ();
 				decisionObj.GetComponent<Decide> ().decision = decision;
 				currentDecisions.Add (decisionObj);
@@ -78,23 +74,9 @@ public class PersonalityTest : MonoBehaviour {
 				break;
 
 			case "ending":
-//				Retreive data from the ending tag
-//				GameObject endingObj = Instantiate (questionPrefab, canvas.transform) as GameObject;
-//				endingObj.GetComponent<Text> ().text = item.InnerText;
-//				endingObj.transform.position = new Vector3 ();
-
 				persistentScript.setPersonalityTestResult (int.Parse (item.InnerText));
 				isFinished = true;
 				break;
-
-//				Create a button to go to the companion scene.
-//				GameObject nextBtn = new GameObject("Next Button");
-//				nextBtn.transform.SetParent(canvas.transform);
-//				nextBtn.AddComponent<Image>();
-//				nextBtn.GetComponent<RectTransform>();
-//				Button btn = nextBtn.AddComponent<Button>();
-//				btn.onClick.AddListener(nextScene);
-//				return;
 			}
 		}
 	}
