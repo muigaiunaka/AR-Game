@@ -4,6 +4,9 @@ using UnityEngine.UI;
 using System.Xml;
 
 public class Decide : MonoBehaviour {
+	private GameObject persistent;
+	private  Persistent persistentScript;
+
 	private ArrayList nextDecisions;
 	private Button buttonObject;
 	private GameObject canvas;
@@ -12,6 +15,9 @@ public class Decide : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		persistent = GameObject.Find ("Persistent");
+		persistentScript = persistent.GetComponent<Persistent> ();
+
 		canvas = GameObject.Find ("Canvas");
 		this.buttonObject = gameObject.GetComponent<Button>();
 		this.buttonObject.onClick.AddListener (decide);
@@ -33,6 +39,12 @@ public class Decide : MonoBehaviour {
 
 		personalityTest.currentDecisions.Clear ();
 		personalityTest.parseQuestion (decision.getNextQuestion ());
+
+		if (personalityTest.isFinished) {
+			Destroy (GameObject.Find ("TestTitle"));
+			persistentScript.nextScene ();
+			persistentScript.loadScene ();
+		};
 	}
 
 	// Update is called once per frame

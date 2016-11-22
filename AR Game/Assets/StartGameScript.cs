@@ -3,12 +3,18 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class StartGameScript : MonoBehaviour {
+	private GameObject persistent;
+	private Persistent persistentScript;
+
 	public GameObject canvas;  // UI Canvas
 	public Button startBtn;    // Start button object
 	public Text btnText;       // Start button text object
 
 	// Use this for initialization
 	void Start () {
+		// Get persistent data.
+		persistent = GameObject.Find ("Persistent");
+		persistentScript = persistent.GetComponent<Persistent> ();
 
 		// Set start button text and add StartGame function on click
 		btnText.text = "Start Game";

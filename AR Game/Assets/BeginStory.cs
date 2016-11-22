@@ -4,12 +4,18 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class BeginStory : MonoBehaviour {
+	private GameObject persistent;
+	private Persistent persistentScript;
+
 	private string[] dialogue;       // The textbox dialogue
 	private int counter = 0;         // Used for getting the line in the dialoge array
 	private GameObject narrTextBox;  // the dialogue textbox game object
 
 	// Use this for initialization
 	void Start () {
+		// Get persistent data.
+		persistent = GameObject.Find ("Persistent");
+		persistentScript = persistent.GetComponent<Persistent> ();
 
 		// Style and position next button
 		GameObject contBtn = GameObject.Find("Continue Btn");
@@ -65,7 +71,8 @@ public class BeginStory : MonoBehaviour {
 			narrText.text = dialogue[counter];
 			counter++;
 		} else {
-			SceneManager.LoadScene(1);
+			persistentScript.nextScene ();
+			persistentScript.loadScene ();
 		}
 	}
 }
