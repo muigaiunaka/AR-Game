@@ -24,4 +24,12 @@ public class Item : MonoBehaviour {
 		return this.name;
 	}
 
+	public void OnMouseOver () {
+	   if (Input.GetMouseButtonDown(0) ||
+		  (Input.touchCount > 0 && (TouchPhase.Began == Input.GetTouch (0).phase))) {
+			//add item to inventory
+			Destroy(gameObject);
+	   }
+	}
+
 }

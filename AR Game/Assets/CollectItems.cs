@@ -12,9 +12,15 @@ namespace Kudan.AR
 		public Button nxtBtn;
 		public Button trackBtn;
 		public Text nxtBtnTxt;
+		public Button tracker;
+		public Companion companion;
+		public Item item;
 		private string[] dialogue;       // The textbox dialogue
 		private int counter = 0;         // Used for getting the line in the dialoge array
 		private int trigger = 4;
+		private Inventory inv;
+		private GameObject persistent;
+		private Persistent persistentScript;
 
 		public KudanTracker _kudanTracker;	// The tracker to be referenced in the inspector. This is the Kudan Camera object.
 	    public TrackingMethodMarkerless _markerlessTracking;	// The reference to the markerless tracking method that lets the tracker know which method it is using
@@ -22,7 +28,14 @@ namespace Kudan.AR
 
 		// Use this for initialization
 		void Start () {
+			// Get persistent data.
+			persistent = GameObject.Find ("Persistent");
+			persistentScript = persistent.GetComponent<Persistent> ();
+
+			inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+
 			nxtBtn.onClick.AddListener(Next);
+			item.OnMouseOver();
 			//nxtBtn.onClick.AddListener(MarkerlessClicked);
 			//nxtBtn.onClick.AddListener(StartClicked);
 			//MarkerlessClicked();
@@ -48,6 +61,7 @@ namespace Kudan.AR
 		
 		// Update is called once per frame
 		void Update () {
+			//Check if item has been added to inventory, if yes, load next scene
 		}
 
 		// Gets the next string in the dialogue array
@@ -57,6 +71,7 @@ namespace Kudan.AR
 				counter++;
 			} else {
 				Destroy(textbox);
+				persistentScript.loadNextScene ();
 			}
 		}
 
@@ -67,8 +82,6 @@ namespace Kudan.AR
 
 		public void StartClicked()
         {
-			Debug.Log("Started!");
-
             // from the floor placer.
             Vector3 floorPosition;			// The current position in 3D space of the floor
             Quaternion floorOrientation;	// The current orientation of the floor in 3D space, relative to the device
