@@ -4,32 +4,48 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class BeginStory : MonoBehaviour {
+	private GameObject persistent;
+	private Persistent persistentScript;
+
 	private string[] dialogue;       // The textbox dialogue
 	private int counter = 0;         // Used for getting the line in the dialoge array
 	private GameObject narrTextBox;  // the dialogue textbox game object
 
 	// Use this for initialization
 	void Start () {
+		// Get persistent data.
+		persistent = GameObject.Find ("Persistent");
+		persistentScript = persistent.GetComponent<Persistent> ();
 
 		// Style and position next button
 		GameObject contBtn = GameObject.Find("Continue Btn");
 		Button btn = contBtn.AddComponent<Button>();
 		contBtn.AddComponent<Image>();
-		RectTransform rt = contBtn.GetComponent<RectTransform>();
+//		RectTransform rt = contBtn.GetComponent<RectTransform>();
 		btn.onClick.AddListener(Next);
-		rt.sizeDelta = new Vector2(150, 50);
-		rt.transform.position = new Vector3(759, 45, 0); //560, 45 759
+//		rt.sizeDelta = new Vector2(150, 50);
+		//		rt.transform.position = new Vector3(759, 45, 0); //560, 45 759
 
 		// Add text to next button
 		GameObject cTextGO = new GameObject("Continue Text");
-		cTextGO.transform.SetParent(contBtn.transform);
+		cTextGO.transform.SetParent(contBtn.transform, false);
 
 		// Style next button text
 	    Text contText = cTextGO.AddComponent<Text>();
 	    contText.text = "Next";
 		contText.color = Color.black;
 		contText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
-		contText.transform.position = new Vector2(794, 0); //600, 0
+
+		//		contText.transform.position = Vector3.zero;
+		contBtn.transform.localPosition = Vector3.zero;
+		RectTransform btnRect = contBtn.GetComponent<RectTransform> ();
+		btnRect.sizeDelta = new Vector2(150, 50);
+		btnRect.anchorMin = new Vector2 (1, .2f);
+		btnRect.anchorMax = new Vector2 (1, .2f);
+		btnRect.pivot = new Vector2 (1, 0);
+		contText.transform.localPosition = Vector3.zero;
+
+//		contText.transform.position = new Vector2(794, 0); //600, 0
 
 		// Add dialogue to the string array
 		dialogue = new string[] {
@@ -49,7 +65,14 @@ public class BeginStory : MonoBehaviour {
 
 		// Set textbox game object to a variable
 		narrTextBox = GameObject.Find("Narrative Text");
-		narrTextBox.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 100);
+//		narrTextBox.transform.position = Vector3.zero;
+//
+//		RectTransform rtText = narrTextBox.GetComponent<RectTransform> ();
+//		rtText.sizeDelta = new Vector2(300, 100);
+//		rtText.anchorMin = new Vector2 (.1f, 0);
+//		rtText.anchorMax = new Vector2 (.1f, 0);
+//		rtText.pivot = new Vector2 (.5f, 0);
+//		narrTextBox.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 100);
 	
 	}
 	
@@ -65,7 +88,7 @@ public class BeginStory : MonoBehaviour {
 			narrText.text = dialogue[counter];
 			counter++;
 		} else {
-			SceneManager.LoadScene(1);
+			persistentScript.loadNextScene ();
 		}
 	}
 }

@@ -4,35 +4,38 @@ using UnityEngine.UI;
 using System.Xml;
 
 public class Decide : MonoBehaviour {
-	private ArrayList nextDecisions;
-	private Button buttonObject;
+	private GameObject persistent;
+	private Persistent persistentScript;
+
+	private Button decisionButton;
 	private GameObject canvas;
 	public Decision decision;
-//	public Transform decisionPrefab;
 
-	// Use this for initialization
 	void Start () {
-		canvas = GameObject.Find ("Canvas");
-		this.buttonObject = gameObject.GetComponent<Button>();
-		this.buttonObject.onClick.AddListener (decide);
-		this.nextDecisions = new ArrayList();
+		persistent = GameObject.Find ("Persistent");
+		persistentScript = persistent.GetComponent<Persistent> ();
+
+		canvas = persistentScript.getSceneCanvas ();
+		decisionButton = gameObject.GetComponent<Button>();
+		decisionButton.onClick.AddListener (decide);
 
 	}
 
 	void decide() {
-//		Text buttonText = buttonObject.GetComponentInChildren<Text> ();
-//		string decisionLetter = buttonText.text.Split (new char[] { ')' }) [0];
-	
 		PersonalityTest personalityTest = canvas.GetComponent<PersonalityTest>();
-		Debug.Log (personalityTest.currentDecisions.Count);
-
 		Destroy (personalityTest.currentQuestion);
+
 		foreach (GameObject option in personalityTest.currentDecisions) {
 			Destroy (option);
 		}
 
 		personalityTest.currentDecisions.Clear ();
 		personalityTest.parseQuestion (decision.getNextQuestion ());
+
+		if (personalityTest.isFinished) {
+			Destroy (GameObject.Find ("TestTitle"));
+			persistentScript.loadNextScene ();
+		};
 	}
 
 	// Update is called once per frame
