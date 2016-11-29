@@ -49,18 +49,18 @@ public class BeginStory : MonoBehaviour {
 
 		// Add dialogue to the string array
 		dialogue = new string[] {
-			"Once upon a time...",
-			"there was a sloth that wanted some bread",
-			"And it decided it wouldn't eat anything other than bread.",
-			"So he was going to search for some.",
-			"But then he remembered...",
-			"That he was a sloth.",
-			"A super lazy sloth.",
-			"And looking for bread would be a lot of work.",
-			"But this was a sloth of his word, and he had vowed not to eat anything other than bread.",
-			"So he starved.",
-			"And died.",
-			"The End."
+			"Once upon a time..."//,
+//			"there was a sloth that wanted some bread",
+//			"And it decided it wouldn't eat anything other than bread.",
+//			"So he was going to search for some.",
+//			"But then he remembered...",
+//			"That he was a sloth.",
+//			"A super lazy sloth.",
+//			"And looking for bread would be a lot of work.",
+//			"But this was a sloth of his word, and he had vowed not to eat anything other than bread.",
+//			"So he starved.",
+//			"And died.",
+//			"The End."
 		};
 
 		// Set textbox game object to a variable

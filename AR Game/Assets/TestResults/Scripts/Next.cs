@@ -7,6 +7,9 @@ public class Next : MonoBehaviour {
 	private Persistent persistentScript;
 
 	private GameObject canvas;
+	private GameObject gameImage;
+	private RawImage gameImageComponent;
+
 	private TestResults testResults;
 	private ArrayList textContents;
 	private IEnumerator textIter;
@@ -18,6 +21,9 @@ public class Next : MonoBehaviour {
 		persistent = GameObject.Find ("Persistent");
 		persistentScript = persistent.GetComponent<Persistent> ();
 		persistentScript.setScene (2);
+
+		gameImage = GameObject.Find ("ComputerModel");
+		gameImageComponent = gameImage.GetComponent<RawImage> ();
 
 		canvas = persistentScript.getSceneCanvas ();
 		testResults = canvas.GetComponent<TestResults> ();
@@ -39,7 +45,18 @@ public class Next : MonoBehaviour {
 
 	void showNextTestResultsText() {
 		int companionId = persistentScript.getPersonalityTestResult ();
-		currentText.text = "Your Companion is: " + persistentScript.getCompanionName (companionId);
+		string companionName = persistentScript.getCompanionName (companionId).ToLower ();
+
+		if (companionName.Equals("bulbasaur")) {
+			Destroy (gameImage);
+			GameObject companion = Instantiate (testResults.bulbasaur) as GameObject;
+			companion.transform.SetParent (canvas.transform, false);
+		}
+		else {
+			gameImageComponent.texture = Resources.Load (companionName) as Texture;
+		}
+
+		currentText.text = "Your Companion is: " + companionName;
 	}
 	
 	// Update is called once per frame
