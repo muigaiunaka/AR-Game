@@ -7,6 +7,8 @@ public class TestResults : MonoBehaviour {
 	public static int TEXT_BOX_LENGTH = 100;
 	private static string TEST_RESULTS_FILE_NAME = "FakeTestResults";
 
+	public GameObject bulbasaur;
+
 	private ArrayList textAfterPersonalityTest = new ArrayList();
 
 	void Start () {
