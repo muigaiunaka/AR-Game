@@ -35,7 +35,6 @@ namespace Kudan.AR
 			inv = GameObject.Find("Inventory").GetComponent<Inventory>();
 
 			nxtBtn.onClick.AddListener(Next);
-			item.OnMouseOver();
 			//nxtBtn.onClick.AddListener(MarkerlessClicked);
 			//nxtBtn.onClick.AddListener(StartClicked);
 			//MarkerlessClicked();
@@ -51,7 +50,8 @@ namespace Kudan.AR
 				"Maybe dat cat will turn into bread.",
 				"Because that's how owl cats work.",
 				"Obviously.",
-				"Anyway, go on and click the bread to add it to yer inventory."
+				"Anyway, go on and click the bread to add it to yer inventory.",
+				"If the item disappears, press 'Find Stuff' to find it again."
 			};
 
 			//StartClicked();
@@ -62,16 +62,23 @@ namespace Kudan.AR
 		// Update is called once per frame
 		void Update () {
 			//Check if item has been added to inventory, if yes, load next scene
+			if (textbox == null) {
+				item.OnMouseOver();
+				persistentScript.loadNextScene ();
+			}
 		}
 
 		// Gets the next string in the dialogue array
 		void Next() {
 			if (counter < dialogue.Length) {
+				if (counter == 4) {
+					tracker.gameObject.SetActive(true);
+				}
 				narTxt.text = dialogue[counter];
 				counter++;
 			} else {
 				Destroy(textbox);
-				persistentScript.loadNextScene ();
+				textbox = null;
 			}
 		}
 
