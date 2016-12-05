@@ -49,18 +49,22 @@ public class BeginStory : MonoBehaviour {
 
 		// Add dialogue to the string array
 		dialogue = new string[] {
-			"Once upon a time..."//,
-//			"there was a sloth that wanted some bread",
-//			"And it decided it wouldn't eat anything other than bread.",
-//			"So he was going to search for some.",
-//			"But then he remembered...",
-//			"That he was a sloth.",
-//			"A super lazy sloth.",
-//			"And looking for bread would be a lot of work.",
-//			"But this was a sloth of his word, and he had vowed not to eat anything other than bread.",
-//			"So he starved.",
-//			"And died.",
-//			"The End."
+			"Greetings on behalf of the U.S. Special Defense Force.",
+			"Allow me to introduce myself. I am Sergeant Liverd and I would like to welcome you to the USSDF program.",
+			"We at the USSDF are tasked with the defense of this country, dealing with high level threats from terrorism to extraterrestrial beings.",
+			"Yes, you heard that right: Aliens.",
+			"Let me be clear, we are not a branch of the military,",
+			"but rather a privatized organization, which gives us freedom to come up with more...creative solutions",
+			"to solve this country's and even this world's highest threats.",
+			"Obviously, what you have just learned is of utmost confidentiality.",
+			"You will not disclose this information to anyone.  We have ways of finding out if you do.",
+			"So, on to our purpose here.",
+			"Based off of our specialized selection process, you have been chosen to participate in our new developmental program.",
+			"Your participation will save millions of lives and you will be doing a great service to your country.",
+			"We will start off with this simple test, but don't worry,",
+			"you won't need a #2 pencil for this or any special knowledge.",
+			"Just answer as genuinly as possible.",
+			"Now, let's get started..."
 		};
 
 		// Set textbox game object to a variable

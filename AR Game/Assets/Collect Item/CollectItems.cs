@@ -34,10 +34,12 @@ namespace Kudan.AR
 
 			inv = GameObject.Find("Inventory").GetComponent<Inventory>();
 
+
 			nxtBtn.onClick.AddListener(Next);
 			//nxtBtn.onClick.AddListener(MarkerlessClicked);
 			//nxtBtn.onClick.AddListener(StartClicked);
 			//MarkerlessClicked();
+			//GameObject.Find("Markerless").SetActive(true);
 
 			// Add dialogue to the string array
 			dialogue = new string[] {
@@ -72,6 +74,10 @@ namespace Kudan.AR
 		void Next() {
 			if (counter < dialogue.Length) {
 				if (counter == 4) {
+
+					_kudanTracker = GameObject.Find("Kudan Camera").GetComponent<KudanTracker>();
+					_markerlessTracking = GameObject.Find("MarkerlessTracking").GetComponent<TrackingMethodMarkerless>();
+
 					tracker.gameObject.SetActive(true);
 				}
 				narTxt.text = dialogue[counter];
