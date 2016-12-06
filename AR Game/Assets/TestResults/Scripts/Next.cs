@@ -51,6 +51,8 @@ public class Next : MonoBehaviour {
 			Destroy (gameImage);
 			GameObject companion = Instantiate (testResults.bulbasaur) as GameObject;
 			companion.transform.SetParent (canvas.transform, false);
+			Animator animator = companion.GetComponent<Animator> ();
+			animator.Play ("Float");
 		}
 		else {
 			gameImageComponent.texture = Resources.Load (companionName) as Texture;
