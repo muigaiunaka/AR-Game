@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:AR Game/Assets/Login.unity.meta
 guid: 9543686b31b3c45ecbfef9325b5e2850
 timeCreated: 1480482534
+=======
+guid: 66d48060a02a7104095210b60f0c91b6
+folderAsset: yes
+timeCreated: 1480964493
+>>>>>>> 0a50949bd4979760cbc217a1c13828210fe22173:AR Game/Assets/TestResults/Prefabs.meta
 licenseType: Free
 DefaultImporter:
   userData: 

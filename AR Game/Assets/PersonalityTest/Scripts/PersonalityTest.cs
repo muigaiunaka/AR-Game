@@ -29,7 +29,6 @@ public class PersonalityTest : MonoBehaviour {
 
 		questionCount = 1;
 		currentDecisions = new HashSet<GameObject> ();
-		Debug.Log (Resources.Load (XML_FILE));
 
 		TextAsset xmlAsset = Resources.Load (XML_FILE) as TextAsset;
 		XmlDocument xmlDoc = new XmlDocument ();
@@ -48,7 +47,6 @@ public class PersonalityTest : MonoBehaviour {
 			switch (item.Name) 
 			{
 			case "description":
-				Debug.Log ("Description: " + item.InnerText);
 				break;
 
 			case "prompt":
