@@ -91,7 +91,7 @@ ModelImporter:
     4300010: head_neck_influence
     4300012: hair
     4300014: neck
-    7400000: Take 001
+    7400000: Float
     9500000: //RootNode
     13700000: neck 1
   materials:
@@ -114,7 +114,99 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Float
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: body/body_control
+        weight: 1
+      - path: body/body_control/body 1
+        weight: 1
+      - path: body/body_control/body 1/head_group
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/head
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/head/neck_end_IK
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/head/neck_end_IK/head_neck_influence
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/head/neck_end_IK/head_neck_influenceBase
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/head/neck_end_IK/torso_neck_control
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/transform1
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/transform1/hair1_joint
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/transform1/hair1_joint/hair
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/transform1/hair1_joint/hair2_joint
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/transform1/hair1_joint/hair2_joint/hair3_joint
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/transform1/hair1_joint/hair2_joint/hair3_joint/hair4_joint
+        weight: 1
+      - path: body/body_control/body 1/head_group/head_control/transform1/hair1_joint/hair2_joint/hair3_joint/hair4_joint/joint5
+        weight: 1
+      - path: body/body_control/body 1/torso_control
+        weight: 1
+      - path: body/body_control/body 1/torso_control/neck_base_FK_control
+        weight: 1
+      - path: body/body_control/body 1/torso_control/neck_base_FK_control/neck_end_FK
+        weight: 1
+      - path: body/body_control/body 1/torso_control/neck_base_IK
+        weight: 1
+      - path: body/body_control/body 1/torso_control/neck_base_IK/neck_torso_influence
+        weight: 1
+      - path: body/body_control/body 1/torso_control/neck_base_IK/neck_torso_influenceBase
+        weight: 1
+      - path: body/body_control/body 1/torso_control/torso_joint
+        weight: 1
+      - path: body/body_control/body 1/torso_control/torso_joint/torso
+        weight: 1
+      - path: neck
+        weight: 1
+      - path: neck/neck 1
+        weight: 1
+      - path: neck/neck1_joint
+        weight: 1
+      - path: neck/neck1_joint/neck2_joint
+        weight: 1
+      - path: neck/neck1_joint/neck2_joint/neck3_joint
+        weight: 1
+      - path: neck/neck1_joint/neck2_joint/neck3_joint/face_joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []

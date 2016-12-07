@@ -59,6 +59,8 @@ public class Next : MonoBehaviour {
 		}
 
 		currentText.text = "Your Companion is: " + companionName;
+		nextButton.onClick.AddListener(persistentScript.loadNextScene);
+		nextButton.onClick.RemoveListener (showNextTestResultsText);
 	}
 	
 	// Update is called once per frame

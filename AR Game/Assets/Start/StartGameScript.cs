@@ -53,7 +53,7 @@ public class StartGameScript : MonoBehaviour {
 		 	
 			// Style and position text in textbox
 		    Text narrText = textGO.AddComponent<Text>();
-		    narrText.text = "What is life?";
+		    narrText.text = "Hello";
 			narrText.color = Color.black;
 			narrText.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
 
@@ -77,6 +77,7 @@ public class StartGameScript : MonoBehaviour {
 			contBtn.AddComponent<BeginStory>();
 
 			Destroy(GameObject.Find("Button"));
+			Destroy(GameObject.Find("splashscreen"));
 		}
 	}
 }
