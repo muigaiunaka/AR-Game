@@ -66,8 +66,15 @@ namespace Kudan.AR
 			//Check if item has been added to inventory, if yes, load next scene
 			if (textbox == null) {
 				item.OnMouseOver();
-				persistentScript.loadNextScene ();
+				tracker.gameObject.transform.GetChild(0).GetComponent<Text>().text = "Next";
+				tracker.onClick.RemoveListener(StartClicked);
+				tracker.onClick.AddListener(loadNextScene);
+				;
 			}
+		}
+
+		void loadNextScene() {
+			persistentScript.loadNextScene ();
 		}
 
 		// Gets the next string in the dialogue array
@@ -79,6 +86,7 @@ namespace Kudan.AR
 					_markerlessTracking = GameObject.Find("MarkerlessTracking").GetComponent<TrackingMethodMarkerless>();
 
 					tracker.gameObject.SetActive(true);
+					nxtBtn.gameObject.SetActive(false);
 				}
 				narTxt.text = dialogue[counter];
 				counter++;
@@ -95,6 +103,10 @@ namespace Kudan.AR
 
 		public void StartClicked()
         {
+			if (counter == 5) {
+				nxtBtn.gameObject.SetActive(true);
+			}
+
             // from the floor placer.
             Vector3 floorPosition;			// The current position in 3D space of the floor
             Quaternion floorOrientation;	// The current orientation of the floor in 3D space, relative to the device
