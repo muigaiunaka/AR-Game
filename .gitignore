@@ -5,6 +5,11 @@ Temp/
 Library/
 ProjectSettings/
 
+# ========== #
+# Maya stuff #
+# ========== #
+# *.composite.*.tif
+
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
