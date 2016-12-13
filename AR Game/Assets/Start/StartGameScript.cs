@@ -6,7 +6,7 @@ public class StartGameScript : MonoBehaviour {
 	private GameObject persistent;
 	private Persistent persistentScript;
 
-	public GameObject canvas;  // UI Canvas
+	public Canvas canvas;  // UI Canvas
 	public Button startBtn;    // Start button object
 	public Text btnText;       // Start button text object
 

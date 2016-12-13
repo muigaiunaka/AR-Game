@@ -6,7 +6,7 @@ public class Next : MonoBehaviour {
 	private GameObject persistent;
 	private Persistent persistentScript;
 
-	private GameObject canvas;
+	private Canvas canvas;
 	private GameObject gameImage;
 	private RawImage gameImageComponent;
 
@@ -20,7 +20,6 @@ public class Next : MonoBehaviour {
 	void Start () {
 		persistent = GameObject.Find ("Persistent");
 		persistentScript = persistent.GetComponent<Persistent> ();
-		persistentScript.setScene (2);
 
 		gameImage = GameObject.Find ("ComputerModel");
 		gameImageComponent = gameImage.GetComponent<RawImage> ();

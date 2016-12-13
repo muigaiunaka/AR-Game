@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Login : MonoBehaviour {
 	/** Variables */
+	private GameObject persistent;
+	private  Persistent persistentScript;
 
 	//Static variables
 	public static string Email = "";
@@ -32,13 +34,15 @@ public class Login : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		persistent = GameObject.Find ("Persistent");
+		persistentScript = persistent.GetComponent<Persistent> ();
 
 		Width = Screen.width;
 		Height = Screen.height;
 		X = 0;
 		Y = 0;
-		btnWidth = 150;
-		btnHeight = 40;
+		btnWidth = Width / 4;
+		btnHeight = Height / 8;
 	}
 		
 	// Main GUI Function
@@ -58,13 +62,16 @@ public class Login : MonoBehaviour {
 	// This method will login the accounts
 	void LoginGUI ()
 	{	
+		GUIStyle buttonStyle = new GUIStyle("button");
+		buttonStyle.fontSize = 48;
+
 		GUI.Box (new Rect (X, Y, Width, Height), "Login");
 		// Open Create Account window
-		if (GUI.Button (new Rect (Width/4, Height - 60, btnWidth, btnHeight), "Create Account")) {
+		if (GUI.Button (new Rect (Width / 5, Height - btnHeight - btnHeight/8, btnWidth, btnHeight), "Create Account", buttonStyle)) {
 			CurrentMenu = "Create Account";
 		}
 		// Open Login window
-		if (GUI.Button (new Rect (Width/4 + 200, Height - 60, btnWidth, btnHeight), "Log In")) {
+		if (GUI.Button (new Rect (Width / 5 + btnWidth + btnWidth/4, Height - btnHeight - btnHeight/8, btnWidth, btnHeight), "Login", buttonStyle)) {
 			//CurrentMenu = "Login";
 			StartCoroutine( LoginToGame() );
 		}// end Buttons
@@ -147,12 +154,17 @@ public class Login : MonoBehaviour {
 	// Login to the game
 	IEnumerator LoginToGame ()
 	{
-		WWWForm loginForm = new WWWForm ();
-		loginForm.AddField ("Email", Email);
-		loginForm.AddField ("Password", Password);
-		WWW LoginWWW = new WWW (LoginUrl, loginForm);
-		yield return LoginWWW;
-		Debug.Log(LoginWWW.text);
+		persistentScript.loadNextScene ();
+		yield return true;
+
+		// Ignore validation for now.
+
+//		WWWForm loginForm = new WWWForm ();
+//		loginForm.AddField ("Email", Email);
+//		loginForm.AddField ("Password", Password);
+//		WWW LoginWWW = new WWW (LoginUrl, loginForm);
+//		yield return LoginWWW;
+//		Debug.Log(LoginWWW.text);
 
 	}
 

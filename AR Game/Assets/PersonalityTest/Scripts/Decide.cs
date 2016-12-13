@@ -8,7 +8,7 @@ public class Decide : MonoBehaviour {
 	private Persistent persistentScript;
 
 	private Button decisionButton;
-	private GameObject canvas;
+	private Canvas canvas;
 	public Decision decision;
 
 	void Start () {

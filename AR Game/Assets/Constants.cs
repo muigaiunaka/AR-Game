@@ -24,7 +24,7 @@ public class Constants {
 	};
 
 	public static string[] SCENES = { 
-		START, PERSONALITY_TEST, TEST_RESULTS, COLLECT_ITEM, MENU 
+		LOGIN, START, PERSONALITY_TEST, TEST_RESULTS, COLLECT_ITEM, MENU 
 	};
 
 	public static HashSet<string> RENDER_CAMERA_SCENES = new HashSet<string> {
@@ -32,6 +32,6 @@ public class Constants {
 	};
 
 	public static HashSet<string> RENDER_OVERLAY_SCENES = new HashSet<string> {
-		START, PERSONALITY_TEST, COLLECT_ITEM, MENU
+		LOGIN, START, PERSONALITY_TEST, COLLECT_ITEM, MENU
 	};
 }

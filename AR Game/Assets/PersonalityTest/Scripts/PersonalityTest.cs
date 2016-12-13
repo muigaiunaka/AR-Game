@@ -14,7 +14,7 @@ public class PersonalityTest : MonoBehaviour {
 	public GameObject decisionPrefab;
 	public GameObject questionPrefab;
 	public GameObject currentQuestion;
-	public GameObject canvas;
+	public Canvas canvas;
 	public HashSet<GameObject> currentDecisions;
 	public bool isFinished = false;
 

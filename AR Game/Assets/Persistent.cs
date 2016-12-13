@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class Persistent : MonoBehaviour {
-//	public Constants constants;
+	
 	private Dictionary<int, string> companionMap = new Dictionary<int, string> ();
 	private Dictionary<string, int> sceneMap = new Dictionary<string, int> ();
 	private int scene = 0;
@@ -14,15 +14,16 @@ public class Persistent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-//		constants = gameObject.GetComponent<Constants> ();
-		canvas = this.getSceneCanvas ().GetComponent<Canvas> ();
+		canvas = this.getSceneCanvas ();
 		this.createCompanionMap ();
 		this.createSceneMap ();
 	}
 
 	void Awake() {
 		DontDestroyOnLoad(gameObject);
-		DontDestroyOnLoad (camera);
+		if (camera != null) {
+			DontDestroyOnLoad (camera);
+		}
 	}
 
 	public void createCompanionMap() {
@@ -58,8 +59,10 @@ public class Persistent : MonoBehaviour {
 		canvas.worldCamera = camera;
 	}
 
-	public GameObject getSceneCanvas() {
-		return GameObject.Find ("Canvas-" + scene.ToString ());
+	public Canvas getSceneCanvas() {
+//		return GameObject.Find ("Canvas-" + scene.ToString ());
+		GameObject canvasObj = GameObject.Find("Canvas");
+		return (canvasObj != null) ? canvasObj.GetComponent<Canvas> () : null;
 	}
 
 	public int getPersonalityTestResult() {
@@ -77,6 +80,7 @@ public class Persistent : MonoBehaviour {
 	public void loadNextScene() {
 		scene++;
 		SceneManager.LoadScene (scene);
+		Debug.Log (scene);
 	}
 
 	public void loadPreviousScene() {
